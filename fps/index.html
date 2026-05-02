@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资料库 | darkesn</title>
+  <meta name="description" content="darkesn 的资料库 —— PDF 文件存档与在线阅读。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    .pdf-list { list-style: none; padding: 0; margin: 0; }
+    .pdf-entry {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .pdf-entry:last-child { border-bottom: none; }
+    .pdf-icon {
+      color: var(--link-static);
+      font-size: 1.3em;
+      flex-shrink: 0;
+      margin-top: 0.05em;
+      user-select: none;
+    }
+    .pdf-body { flex: 1; }
+    .pdf-title {
+      color: var(--text-headings);
+      font-weight: bold;
+      font-size: 0.95em;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .pdf-desc {
+      color: var(--text-muted);
+      font-size: 0.85em;
+      display: block;
+      margin-bottom: 0.4rem;
+      line-height: 1.6;
+    }
+    .pdf-meta {
+      color: var(--text-muted);
+      font-size: 0.78em;
+      font-style: italic;
+      display: block;
+      margin-bottom: 0.7rem;
+    }
+    .pdf-actions { display: flex; gap: 1.2rem; align-items: center; }
+    .pdf-btn {
+      font-size: 0.82em;
+      color: var(--link-static);
+      border-bottom: 1px dotted var(--link-static);
+      padding-bottom: 1px;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .pdf-btn:hover {
+      color: var(--link-hover);
+      border-color: var(--link-hover);
+    }
+    .pdf-pending {
+      color: var(--text-muted);
+      font-size: 0.8em;
+      font-style: italic;
+    }
+    .page-intro {
+      color: var(--text-muted);
+      font-size: 0.88em;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== 导航栏 ===== -->
+<nav>
+  <a href="../index.html">首页</a>
+  <a href="../blog/index.html">博客</a>
+  <a href="index.html" class="active">资料库</a>
+  <a href="../sponsors/index.html">赞助</a>
+  <a href="../links/index.html">链接</a>
+  <a href="#" class="rss-link" title="RSS">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/>
+    </svg>
+  </a>
+</nav>
+
+<!-- ===== 主内容 ===== -->
+<main>
+  <div class="container">
+
+    <h1 class="blog-page-title">资料库</h1>
+
+    <p class="page-intro">
+      存档文件、手册与参考资料。点击「预览」直接在浏览器中阅读，点击「下载」保存到本地。
+    </p>
+
+    <!-- ===================================================
+         添加新文件：复制下方 <li> 格式，粘贴到列表里
+         PDF 文件放在 fps/pdfs/ 文件夹
+         =================================================== -->
+    <ul class="pdf-list">
+
+      <!-- 示例条目（上传真实 PDF 后替换这一段） -->
+      <li class="pdf-entry">
+        <span class="pdf-icon">▣</span>
+        <div class="pdf-body">
+          <span class="pdf-title">示例文档 — 待上传</span>
+          <span class="pdf-desc">将 PDF 文件放入 fps/pdfs/ 文件夹，然后按以下格式添加条目，再推送到 GitHub。</span>
+          <span class="pdf-meta">2026-05-02</span>
+          <div class="pdf-actions">
+            <span class="pdf-pending">文件准备中…</span>
+          </div>
+        </div>
+      </li>
+
+      <!--
+      新文件条目格式（复制这段取消注释）：
+
+      <li class="pdf-entry">
+        <span class="pdf-icon">▣</span>
+        <div class="pdf-body">
+          <span class="pdf-title">文件标题</span>
+          <span class="pdf-desc">这份文件的简短介绍。</span>
+          <span class="pdf-meta">YYYY-MM-DD</span>
+          <div class="pdf-actions">
+            <a href="pdfs/文件名.pdf" target="_blank" class="pdf-btn">预览</a>
+            <a href="pdfs/文件名.pdf" download class="pdf-btn">下载</a>
+          </div>
+        </div>
+      </li>
+      -->
+
+    </ul>
+
+  </div>
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <span class="footer-info">darkesn // 2026</span>
+      <div class="footer-links">
+        <a href="https://github.com/0xrmrust" target="_blank" rel="noopener">GitHub</a>
+        <a href="../links/index.html">联系我</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>赞助 | darkesn</title>
+  <meta name="description" content="感谢每一位赞助 darkesn 的朋友。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    .sponsor-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+      margin-top: 1.5rem;
+    }
+    .sponsor-table th {
+      text-align: left;
+      color: var(--text-muted);
+      font-weight: normal;
+      font-size: 0.82em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem 0.5rem 0;
+      border-bottom: 1px dashed var(--border-subtle);
+    }
+    .sponsor-table td {
+      padding: 0.75rem 1rem 0.75rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      vertical-align: top;
+    }
+    .sponsor-table tr:last-child td { border-bottom: none; }
+    .sponsor-name {
+      color: var(--text-headings);
+      font-weight: bold;
+    }
+    .sponsor-amount {
+      color: var(--link-static);
+      white-space: nowrap;
+    }
+    .sponsor-date {
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 0.88em;
+      white-space: nowrap;
+    }
+    .sponsor-note {
+      color: var(--text-muted);
+      font-size: 0.85em;
+    }
+    .sponsor-total {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--border-subtle);
+      font-size: 0.88em;
+      color: var(--text-muted);
+    }
+    .sponsor-total span {
+      color: var(--link-static);
+      font-weight: bold;
+    }
+    .page-intro {
+      color: var(--text-muted);
+      font-size: 0.88em;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+    .sponsor-empty {
+      color: var(--text-muted);
+      font-size: 0.88em;
+      font-style: italic;
+      padding: 2rem 0;
+    }
+    .qr-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px dashed var(--border-subtle);
+    }
+    .qr-section h2 {
+      font-size: 0.85em;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: normal;
+      border-bottom: none;
+      margin-bottom: 1rem;
+    }
+    .qr-placeholder {
+      display: inline-block;
+      width: 140px;
+      height: 140px;
+      border: 1px dashed var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.78em;
+      text-align: center;
+      padding: 1rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== 导航栏 ===== -->
+<nav>
+  <a href="../index.html">首页</a>
+  <a href="../blog/index.html">博客</a>
+  <a href="../fps/index.html">资料库</a>
+  <a href="index.html" class="active">赞助</a>
+  <a href="../links/index.html">链接</a>
+  <a href="#" class="rss-link" title="RSS">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/>
+    </svg>
+  </a>
+</nav>
+
+<!-- ===== 主内容 ===== -->
+<main>
+  <div class="container">
+
+    <h1 class="blog-page-title">赞助名单</h1>
+
+    <p class="page-intro">
+      感谢每一位支持 darkesn 的朋友。<br>
+      你们的赞助让这个站点持续运转。
+    </p>
+
+    <!-- ===================================================
+         添加赞助记录：在 <tbody> 里复制 <tr> 格式
+         =================================================== -->
+    <table class="sponsor-table">
+      <thead>
+        <tr>
+          <th>名字</th>
+          <th>金额</th>
+          <th>日期</th>
+          <th>留言</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- 示例条目（添加真实数据后替换） -->
+        <tr>
+          <td><span class="sponsor-name">—</span></td>
+          <td><span class="sponsor-amount">—</span></td>
+          <td><span class="sponsor-date">—</span></td>
+          <td><span class="sponsor-note">第一位赞助者，期待你</span></td>
+        </tr>
+
+        <!--
+        赞助条目格式（复制这段取消注释）：
+
+        <tr>
+          <td><span class="sponsor-name">赞助者名字</span></td>
+          <td><span class="sponsor-amount">¥ 金额</span></td>
+          <td><span class="sponsor-date">YYYY-MM-DD</span></td>
+          <td><span class="sponsor-note">留言内容（可不填）</span></td>
+        </tr>
+        -->
+
+      </tbody>
+    </table>
+
+    <!-- 赞助合计（手动更新） -->
+    <div class="sponsor-total">
+      累计赞助：<span>¥ 0</span>　共 <span>0</span> 位赞助者
+    </div>
+
+    <!-- 赞助方式（可放收款码） -->
+    <div class="qr-section">
+      <h2>赞助方式</h2>
+      <div class="qr-placeholder">
+        收款码<br>占位<br>（替换为图片）
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <span class="footer-info">darkesn // 2026</span>
+      <div class="footer-links">
+        <a href="https://github.com/0xrmrust" target="_blank" rel="noopener">GitHub</a>
+        <a href="../links/index.html">联系我</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
